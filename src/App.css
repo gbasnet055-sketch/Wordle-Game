@@ -1,0 +1,140 @@
+.game-container {
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 20px;
+  text-align: center;
+}
+
+.game-header {
+  border-bottom: 1px solid #d3d6da;
+  padding-bottom: 15px;
+  margin-bottom: 25px;
+}
+
+.game-header h1 {
+  font-size: 38px;
+  font-weight: bold;
+  letter-spacing: 5px;
+  margin: 0;
+}
+
+.game-header p {
+  color: #666;
+  margin-top: 8px;
+}
+
+.game-board {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 30px;
+}
+
+.board-row {
+  display: flex;
+  gap: 6px;
+}
+
+.tile {
+  width: 58px;
+  height: 58px;
+  border: 2px solid #d3d6da;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 26px;
+  font-weight: bold;
+  text-transform: uppercase;
+  background: white;
+  color: #222;
+}
+
+.tile.correct,
+.key.correct {
+  background-color: #6aaa64;
+  color: white;
+  border-color: #6aaa64;
+}
+
+.tile.present,
+.key.present {
+  background-color: #c9b458;
+  color: white;
+  border-color: #c9b458;
+}
+
+.tile.absent,
+.key.absent {
+  background-color: #787c7e;
+  color: white;
+  border-color: #787c7e;
+}
+
+.keyboard {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  align-items: center;
+}
+
+.keyboard-row {
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+}
+
+.key,
+.special-key {
+  height: 48px;
+  min-width: 32px;
+  padding: 0 7px;
+  border: none;
+  border-radius: 4px;
+  background: #d3d6da;
+  color: #222;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.special-key {
+  background: #a5a8aa;
+  min-width: 55px;
+}
+
+.key:hover,
+.special-key:hover {
+  opacity: 0.8;
+}
+
+.result-message {
+  margin-top: 25px;
+  padding: 15px;
+  background: #f1f1f1;
+  border-radius: 8px;
+}
+
+.result-message button {
+  padding: 10px 20px;
+  background: #6aaa64;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+@media (max-width: 400px) {
+  .tile {
+    width: 48px;
+    height: 48px;
+  }
+
+  .key {
+    min-width: 25px;
+    padding: 0 5px;
+    font-size: 12px;
+  }
+}
